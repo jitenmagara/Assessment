@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Swan Solution Pvt. Ltd</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f2f5fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #34495e;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        /* Gender radio button group styles */
+        .gender-options {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .gender-options label {
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+
+        .button-group {
+            grid-column: span 2;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn {
+            background: #2980b9;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background: #1f6391;
+        }
+
+        .reset-btn {
+            background: #bdc3c7;
+            color: #2c3e50;
+        }
+
+        .reset-btn:hover {
+            background: #95a5a6;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 650px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width,
+            .button-group {
+                grid-column: span 1;
+                flex-direction: column;
+            }
+
+            .button-group {
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Guest Registration Form</h2>
+        <form>
+            <div class="form-group full-width">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter guest's full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="aadhar">Aadhar Card Number</label>
+                <input type="text" id="aadhar" name="aadhar" pattern="[0-9]{12}" maxlength="12"
+                    placeholder="Enter 12-digit Aadhar number" required>
+            </div>
+
+            <!-- Gender Radio Buttons -->
+            <div class="form-group full-width">
+                <label>Gender</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="checkin">Check-in Date</label>
+                <input type="date" id="checkin" name="checkin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkout">Check-out Date</label>
+                <input type="date" id="checkout" name="checkout" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="purpose">Purpose of Visit</label>
+                <select id="purpose" name="purpose" required>
+                    <option value="">-- Select Purpose --</option>
+                    <option value="business">Business</option>
+                    <option value="leisure">Leisure</option>
+                    <option value="conference">Conference</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
