@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customer Feedback Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -13,10 +13,10 @@
         <h1>Event Feedback Form</h1>
         <form id="feedbackForm">
             <label for="name">Attendee Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required />
 
             <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required />
 
             <label for="event">Event Attended:</label>
             <select id="event" name="event" required>
@@ -28,11 +28,11 @@
 
             <label>Rating:</label>
             <div class="rating">
-                <label><input type="radio" name="rating" value="1">1</label>
-                <label><input type="radio" name="rating" value="2">2</label>
-                <label><input type="radio" name="rating" value="3">3</label>
-                <label><input type="radio" name="rating" value="4">4</label>
-                <label><input type="radio" name="rating" value="5">5</label>
+                <label><input type="radio" name="rating" value="1" />1</label>
+                <label><input type="radio" name="rating" value="2" />2</label>
+                <label><input type="radio" name="rating" value="3" />3</label>
+                <label><input type="radio" name="rating" value="4" />4</label>
+                <label><input type="radio" name="rating" value="5" />5</label>
             </div>
 
             <label for="comments">Comments:</label>
@@ -41,9 +41,10 @@
             <button type="submit">Submit Feedback</button>
         </form>
         <p id="message"></p>
-        <a href="view.html" class="view-link">View Feedback</a>
+        <a href="view.html" class="view-link">View All Feedback</a>
     </div>
-    <script src="form.js"></script>
+
+    <script type="module" src="./js/formHandler.js"></script>
 </body>
 
 </html>

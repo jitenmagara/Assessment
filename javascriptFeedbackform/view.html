@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>View Feedback</title>
-    <link rel="stylesheet" href="view.css">
-
+    <link rel="stylesheet" href="view.css" />
 </head>
 
 <body>
     <div class="container">
         <h1>All Feedbacks</h1>
-        <input type="text" id="search" placeholder="Search by name or event...">
+        <input type="text" id="search" placeholder="Search by name or event..." />
+
         <table id="feedbackTable">
             <thead>
                 <tr>
@@ -21,14 +21,17 @@
                     <th>Event</th>
                     <th>Rating</th>
                     <th>Comments</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody></tbody>
         </table>
-        <p id="noData" style="text-align:center; color:gray;">No feedback found.</p>
-        <a href="index.html" class="view-link">Go Back</a>
+
+        <p id="noData">No feedback found.</p>
+        <a class="view-link" href="index.html">Go Back</a>
     </div>
-    <script src="view.js"></script>
+
+    <script type="module" src="./js/viewer.js"></script>
 </body>
 
 </html>
